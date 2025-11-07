@@ -4,12 +4,15 @@ Chromium based extension that auto-detects game names from any site for a smart 
 ## ✨ Core Features
 
 * **Smart Game Detection:** Right-click any game **image** or **title** on any site. The extension intelligently finds the game's name.
+* ![Uploading 1107 (1).gif…]()
+
 * **Automatic Title Cleaning:** Instantly removes clutter from complex titles (like those on FitGirl, DODI, or Steamrip) before searching.
     * Removes prefixes like `#9544` or `2549-`.
     * Strips version numbers like `v1.14.0.1`.
     * Removes extra tags like `+ 7 DLCs`, `+ Multiplayer`, `Repack`, `по сети`, etc.
 * **Standard Text Search:** Works as a normal "search for selected text" tool.
 * **Custom Suffix Popup:** Click the extension's toolbar icon 🔴 to set your default search suffix (e.g., "full gameplay", "walkthrough"). Includes quick suggestions and a history of your custom terms.
+* ![1107(1)](https://github.com/user-attachments/assets/7a46bd56-815d-4b3b-b308-fabd628aa01e)
 
 ---
 
