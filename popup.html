@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f5f7;
+      margin: 0;
+      padding: 12px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .section {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    h3 {
+      font-size: 14px;
+      color: #5E6C84;
+      margin: 0 0 10px 0;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #EBECF0;
+    }
+    .input-group {
+      display: flex;
+      gap: 8px;
+    }
+    input[type='text'] {
+      flex-grow: 1;
+      border: 1px solid #DFE1E6;
+      border-radius: 5px;
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+    input[type='text']:focus {
+      border-color: #0052cc;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0,82,204,0.2);
+    }
+    #saveButton {
+      background-color: #0052cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    #saveButton:hover { background-color: #0065ff; }
+    #status {
+      font-size: 12px;
+      color: #0065ff;
+      height: 14px;
+      margin-top: 8px;
+    }
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .suggestion-btn {
+      background-color: #EBECF0;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: #42526E;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .suggestion-btn:hover { background-color: #DFE1E6; }
+    #history-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+    #history-list li {
+      padding: 8px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #history-list li:hover {
+      background-color: #FAFBFC;
+    }
+    .history-text { color: #172B4D; }
+    .delete-btn {
+      font-size: 18px;
+      color: #B3BAC5;
+      cursor: pointer;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    .delete-btn:hover { color: #DE350B; background-color: #FFEBEE; }
+    #no-history {
+      font-size: 13px;
+      color: #5E6C84;
+      text-align: center;
+      padding: 10px 0;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      border-top: 1px solid #EBECF0;
+      margin-top: 4px;
+    }
+    footer a {
+      display: inline-block;
+      line-height: 0;
+    }
+    footer svg {
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    footer a:hover svg { opacity: 1; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="section">
+      <h3>Current Suffix</h3>
+      <div class="input-group">
+        <input type="text" id="suffixWord" placeholder="Enter custom word...">
+        <button id="saveButton">Save</button>
+      </div>
+      <div id="status"></div>
+    </div>
+
+    <div class="section">
+      <h3>Suggestions</h3>
+      <div class="suggestions">
+        <button class="suggestion-btn" data-value="gameplay">gameplay</button>
+        <button class="suggestion-btn" data-value="full gameplay">full gameplay</button>
+        <button class="suggestion-btn" data-value="walkthrough">walkthrough</button>
+        <button class="suggestion-btn" data-value="review">review</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>History (Last 5)</h3>
+      <ul id="history-list">
+      </ul>
+      <div id="no-history" style="display: none;">No custom history yet.</div>
+    </div>
+
+    <footer>
+      <a href="https://www.facebook.com/lucy.dragneel.756412" target="_blank" title="Contact Us">
+        <svg fill="#1877F2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.22 6.05 16.5 6.09V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+        </svg>
+      </a>
+    </footer>
+
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
