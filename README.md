@@ -21,7 +21,7 @@ Chromium based extension that auto-detects game names from any site for a smart 
 
 This is an unpacked developer extension. Manual installation takes only 1 minute.
 
-1.  **Download:** Go to the **[Releases Page](./releases/tag/v1.0)** and download the latest `.zip` file.
+1.  **Download:** Go to the **[Releases Page](https://github.com/dmcbx/Youtube-Game-Search/releases/tag/v1.0)** and download the latest `.zip` file.
 2.  **Unzip:** Extract the `.zip` file into a permanent folder on your computer (e.g., in your "Documents" folder).
 3.  **Open Browser:** Open Chrome (or Edge).
 4.  **Open Extensions Page:** Type `chrome://extensions` (or `edge://extensions` for Edge) in your address bar and press Enter.
